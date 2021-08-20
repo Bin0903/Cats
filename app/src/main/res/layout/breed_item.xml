@@ -51,19 +51,11 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/lifespan"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:textColor="#3C3C3C"
-                            android:textSize="15sp" />
-
-                        <TextView
                             android:id="@+id/description"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
-                            android:maxLines="3"
+                            android:maxLines="5"
                             android:ellipsize="end"
                             android:textColor="#5B5B5B"
                             android:textSize="12sp" />

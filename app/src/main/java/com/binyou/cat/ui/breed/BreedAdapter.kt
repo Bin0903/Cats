@@ -24,10 +24,8 @@ class BreedAdapter(private val activity: Activity, private val breedList: List<B
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val breedName: TextView = view.findViewById(R.id.breedName)
-        val breedLifespan: TextView = view.findViewById(R.id.lifespan)
         val breedDescription: TextView = view.findViewById(R.id.description)
         val breedPicture: ImageView = view.findViewById(R.id.breedPicture)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -48,8 +46,7 @@ class BreedAdapter(private val activity: Activity, private val breedList: List<B
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val breed = breedList[position]
-        holder.breedName.text = "Breed: " + breed.name
-        holder.breedLifespan.text = "Lifespan: " + breed.lifespan + " years"
+        holder.breedName.text = breed.name
         holder.breedDescription.text = breed.description
 
         ImageLoadTask(holder.breedPicture).execute(breedList[position].image)

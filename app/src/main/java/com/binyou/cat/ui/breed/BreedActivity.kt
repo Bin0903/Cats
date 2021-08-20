@@ -24,19 +24,20 @@ class BreedActivity : AppCompatActivity() {
         updateView(breed)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateView(breed: Breed) {
         ImageLoadTask(breedImage).execute(breed.image)
 
-        name.text = breed.name
-        temperament.text = breed.temperament
-        origin.text = breed.origin
-        description.text = breed.description
-        lifespan.text = breed.lifespan
-        intelligence.text = breed.intelligence.toString()
-        dogFriendly.text = breed.dogFriendly.toString()
-        childFriendly.text = breed.childFriendly.toString()
-        strangerFriendly.text = breed.strangerFriendly.toString()
-        wikiUrl.text = breed.wikiUrl
+        name.text = "Breed Name: " + breed.name
+        temperament.text = "Temperament:\n" + breed.temperament
+        origin.text = "Origin: " + breed.origin
+        description.text = "Description:\n" + breed.description
+        lifespan.text = "Lifespan: " + breed.lifespan
+        intelligence.text = "Intelligence Index - " + breed.intelligence.toString()
+        dogFriendly.text = "Dog Friendly Index - " + breed.dogFriendly.toString()
+        childFriendly.text = "Child Friendly Index - " + breed.childFriendly.toString()
+        strangerFriendly.text = "Stranger Friendly Index - " + breed.strangerFriendly.toString()
+        wikiUrl.text = "Wiki:\n" + breed.wikiUrl
     }
 
     @SuppressLint("StaticFieldLeak")
